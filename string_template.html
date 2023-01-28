@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        const name ="Riyan Fikri";
+        const nilai = 80;
+        const templateString = `Nama : ${name}, lulus : ${nilai > 75}`;
+
+
+        // menampilkan dilayar
+        document.writeln(templateString);
+        // menampilkan hasil di console
+        console.info(templateString);
+
+        /*multiline string
+        backtick atau tanda ` bukan ' bisa digunakan untuk multiline
+        */
+        const textTemplateMulti = `Nama saya Riyan Fikri, 
+        Saya Belajar 
+        Javascript Dasar
+        `;
+
+        // menampilkan dilayar
+        document.writeln("<pre>");
+        document.writeln(textTemplateMulti);
+        document.writeln("<pre>");
+        // menampilkan hasil di console
+        console.info(textTemplateMulti);
+
+    </script>
+</body>
+</html>
