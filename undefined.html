@@ -8,7 +8,35 @@
 </head>
 <body>
     <script>
-        
+
+        let data;
+
+        if(data==undefined){
+            // Jika data variabel belum didefinisikan
+            alert("Undefined");
+        } else {
+            // Jika data variabel sudah didefinisikan
+            alert("Define");
+        }
+
+        // undefine pada array
+        const arrayData = ["Estu", "Fatikha","Futukhur"];
+
+        if(arrayData[2] == undefined){
+            console.info("Array Undefined");
+        } else {
+            console.info("Array Define");
+        }
+
+        // undefine pada objek
+        const objectData = {};
+
+        if(objectData.nama == undefined){
+            console.info("Object Undefined");
+        } else {
+            console.info("Object Define");
+        }
+
     </script>
 </body>
 </html>
