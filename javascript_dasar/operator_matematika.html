@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Matematika</title>
+</head>
+<body>
+    <script>
+    //Operator Aritmatika
+    document.writeln("<b>Operator Aritmatika</b><br>");
+    // Penjumlahan
+    let count = 1+2;
+    document.writeln("1 + 2 = " + count);
+    document.writeln("<br>");
+    let countPlus=count;
+    
+    //pengurangan
+    count=count-1;
+    document.writeln(countPlus + " - 2 =" + count);
+    document.writeln("<br>");
+    let countMinus= count;
+
+    //perkalian
+    count = count * 2;
+    document.writeln(countMinus + " * 2 =" + count);
+    document.writeln("<br><br>");
+
+    //Operator Augmented Assignments
+    document.writeln("<b>Operator Augmented Assignments</b><br>");
+    // Penjumlahan
+    let countAug = 1+2;
+    document.writeln("1 + 2 = " + countAug);
+    document.writeln("<br>");
+    let countPlusAug=countAug;
+    
+    //pengurangan
+    countAug-=1;  // <<< -=  Operator Augmented Assignment
+    document.writeln(countPlusAug + " - 2 =" + countAug);
+    document.writeln("<br><br>");
+
+    //Operator Unary hanya digunakan untuk 1 data saja
+    document.writeln("<b>Operator Unary</b>");
+    let result = 1;
+    document.writeln("<p>" + result + "</p>");
+    result--;
+    document.writeln("<p>" + result + "</p>");
+    result++;
+    document.writeln("<p>" + result + "</p>");
+    result = -result;
+    document.writeln("<p>" + result + "</p>");
+    </script>
+</body>
+</html>
