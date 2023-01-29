@@ -9,8 +9,26 @@
 <body>
     <script>
     
+        /* 
+        ternary operator adalah operator sederhana dari if statement
+        berikut perbedaan if statement dan ternary operator 
+        */
 
+        // if statement
+        const nilai = 40;
+        let ucapan;
+        if(nilai > 70){
+            ucapan = "Selamat Anda Lulus";
+        }else{
+            ucapan = "Maaf Anda Tidak Lulus";
+        }
+
+        document.writeln(`<p> ${ucapan} </p>`);
       
+        // ternary operator
+        const  nilaiData = 85;
+        const hasil = nilaiData >= 75 ? "Selamat Anda Lulus" : "Maaf Anda Tidak Lulus" ;
+        document.writeln(`<p> ${hasil} </p>`);
     </script>
 </body>
 </html>
