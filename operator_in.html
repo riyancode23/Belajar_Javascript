@@ -7,6 +7,25 @@
     <title>Operator In</title>
 </head>
 <body>
-    
+    <script>
+
+        // Operator in hanya mengecek ada atau tidak data/property
+        const data = {
+            nama: "Riyan",
+            umur: 27
+        };
+
+        if("udi" in data){
+            alert("Ada");
+        } else {
+            alert("Tidak Ada");
+        }
+
+       //  mengecek data atau property pada urutan Array
+        const dataArray = [null, "Mangga", null];
+        const result = 0 in dataArray;
+
+        document.writeln(result); 
+    </script>
 </body>
 </html>
