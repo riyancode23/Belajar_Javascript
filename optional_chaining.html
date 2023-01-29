@@ -7,6 +7,24 @@
     <title>Optional Chaining</title>
 </head>
 <body>
-    
+    <script>
+        const person = {};
+        // ? adalah optional chaining
+        // Jika data property tidak ada Null / Undefined
+        let country = person?.address?.country;
+
+        document.writeln(`<p> ${country} </p>`)
+
+        // Jika data property ada
+        const data = {
+            address : {
+                country:"Indonesia"
+            }
+        };
+        // ? adalah optional chaining
+        country = data?.address?.country;
+
+        document.writeln(`<p> ${country} </p>`)
+    </script>
 </body>
 </html>
