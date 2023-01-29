@@ -8,7 +8,20 @@
 </head>
 <body>
     <script>
-        
+       // popup Alert, yaitu defaultnya popup alert
+       alert("hello world");
+
+       // popup prompt
+       const name = prompt("Siapa Nama Anda?");
+       alert("Hallo " + name);
+
+       // popup confirm
+       const masuk = confirm("Yakin Hapus Data id:8243000 ?");
+       if(masuk){
+        alert("Berhasil dihapus");
+       }else{
+        alert("Tidak Jadi dihapus");
+       }
     </script>
 </body>
 </html>
