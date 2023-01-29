@@ -8,7 +8,37 @@
 </head>
 <body>
     <script>
-        
+
+        let examValue = 90;
+
+        // ekspresi if
+        if(examValue > 80){
+            document.writeln("Good Job");
+            document.writeln("<br>");
+        }
+
+
+        examValue = 70;
+        // ekspresi if..else
+         if(examValue > 80){
+            document.writeln("Good Job");
+        } else {
+            document.writeln("Try Again Next");
+        }
+        document.writeln("<br>");
+
+
+        examValue = 70;
+        // ekspresi if..else if .. else. Percabangan banyak
+         if(examValue > 80){
+            document.writeln("Good Job");
+        } else if (examValue > 60) {
+            document.writeln("Not Bad");
+        } else {
+            document.writeln("Try Again Next");   
+        }
+        document.writeln("<br>");
+
     </script>
 </body>
 </html>
