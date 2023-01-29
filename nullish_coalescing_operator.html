@@ -8,7 +8,24 @@
 </head>
 <body>
     <script>
-        
+
+        /*
+        Nullish Coalescing ini sama seperti ternary operator hanya saja
+        dikhususkan untuk null dan undefined 
+        */
+        let parameter
+        let data = parameter;
+
+        // menggunakan if statement
+        if(data === undefined || data === null){
+            data ="Nilai default";
+        } 
+        document.writeln(`<p> ${data} </p>`);
+
+        // menggunakan Nullish Coalescing
+        data = parameter ?? "Nilai default";
+        document.writeln(`<p> ${data} </p>`);
+
     </script>
 </body>
 </html>
