@@ -7,6 +7,19 @@
     <title>Falsy dan Truthy</title>
 </head>
 <body>
-    
+    <script>
+
+
+        let data =""; // sama dengan null karena string kosong
+            data = {}; // dianggap true karena ada object
+            data = false; // boolean false tetap false
+            data = null; // null sama dengan false
+        if(data){
+            document.writeln("True")
+        } else {
+            document.writeln("False");
+        }
+
+    </script>
 </body>
 </html>
