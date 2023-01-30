@@ -7,6 +7,31 @@
     <title>operator logika di non boolean</title>
 </head>
 <body>
-    
+    <script>
+        // operator logika non boolean
+
+        //OR ... ||
+        console.info("hello" || "");
+        console.info("" || ["hai"]);
+        console.info("0" || ["NOL"]);
+        console.info( 0 || null);
+        console.info( 0 ||false);
+
+        // study kasus OR >> ||
+        const person = {
+            firstname :"",
+            lastname : "Fikri" 
+        }
+        // jika OR maka nilai true adalah yang terisi
+        const name = person.firstname || person.lastname;
+        console.info(name);
+
+        // AND ... &&
+        console.info("&&");
+        console.info("hello" && "");
+        console.info("" && ["hai"]);
+        console.info("0" && "NOL");
+
+    </script>
 </body>
 </html>
