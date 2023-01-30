@@ -8,7 +8,26 @@
 </head>
 <body>
     <script>
-       
+       // Break
+       let counter = 1;  // init statement
+        while(true){ //kondisi
+            document.writeln(`<p> Perulangan ke ${counter} </p>`);
+            counter++; // post statement
+
+            if(counter > 5){
+                break; // operator break untuk menghentikan perulangan terus menerus
+            }
+        }
+
+        // continue
+
+        for(let i = 1; i <= 100; i++){
+            
+            if(i % 2 === 0){  // kondisi untuk mengambil data ganjil
+                continue;
+            }
+            document.writeln(`Perulangan ganjil ${i} <br>`);
+        }
     </script>
 </body>
 </html>
