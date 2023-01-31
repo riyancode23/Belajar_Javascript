@@ -1,6 +1,8 @@
 # Belajar_Javascript_Dasar
 Source code Belajar Javascript Dasar
 
+APA ITU JAVASCRIPT ??
+JavaScript adalah skrip pemrograman ringan yang umumnya digunakan oleh web developer untuk menciptakan interaksi yang lebih dinamis saat membuat halaman web, aplikasi, server, atau game.
 Bahasa yang digunakan :
 - HTML5
 - Javascript
