@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>rest parameter</title>
 </head>
 <body>
     <script>
 
-        
+    // function(parameter1, ...rest parameter2)
+    function sum( name, ...data){
+       let total = 0;
+       for (const item of data){
+         total += item;
+       }
+       document.writeln(`<p> Total ${name} is ${total}</p>`);
+    };  
+    
+    // memanggil function rest parameter
+    sum("Nilai",5, 10, 20, 18, 17);
+
+    // misal ada data array yang sudah ada 
+    const array = [4, 5, 7, 10, 11];
+    // pemanggilan tidak boleh seperti ini.
+    sum("Baju", array);
+    // pemanggilan harus seperti ini.
+    sum("Celana", ...array);
+
+    
 
     </script>
 </body>

@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>function return value</title>
 </head>
 <body>
     <script>
+    
+    // RETURN STRING
 
-        
+    // membuat function, nama function harus digabung tidak boleh pakai space
+    function sayHello(namaAwal, namaAkhir){
+        const say = `Hello ${namaAwal} ${namaAkhir}`; 
+
+        return say;
+    };  
+    
+    // memanggil function
+    const result = sayHello("Riyan", "Fikri");
+    document.writeln(`${result}`);
+
+    // return with if..elese if .. else
+    function getFinalValue(value){
+        if (value > 90) {
+            return "A";
+        } else if((value > 80)) {
+            return "B";
+        } else if((value > 65)) {
+            return "C";
+        } else {
+            return "D";
+        }
+    };
+
+    // memanggil function getFinalValue
+    const hasil = getFinalValue(80);
+    document.writeln(`Nilai Anda = ${hasil}`);
 
     </script>
 </body>

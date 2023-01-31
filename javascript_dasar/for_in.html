@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>for in</title>
 </head>
 <body>
     <script>
 
-        
+        /*
+        operator for .. in digunakan untuk mengambil property pada objek
+        dan index pada data array.
+        */        
+
+
+        // for .. in pada object
+        const person = {
+            firstname : "Estu",
+            middlename : "Fatikha",
+            lastname : "Rohmah"
+        };
+
+        for(const property in person){
+            document.writeln(`<p> ${property} : ${person[property]} </p>`);
+        }
+
+        // for .. in pada array
+        const dataPerson = ["Bagus","Adi","Jaya"];
+        for(const arrayData in dataPerson){
+            document.writeln(`<p>  ${arrayData} : ${dataPerson[arrayData]}</p>`);
+        }
 
     </script>
 </body>

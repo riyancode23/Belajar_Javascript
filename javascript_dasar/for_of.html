@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>for of</title>
 </head>
 <body>
     <script>
 
-        
+        /*
+        for .. of digunakan iterasi terhadap isi valuenya, bukan lagi index atau property
+        array dan string bisa di iterable, object bukan iterable
+        */
+
+        // for .. in pada array
+        const dataPerson = ["Bagus", "Adi", "Jaya"];
+        for(const arrayData of dataPerson){
+            document.writeln(`<p> ${arrayData} </p>`);
+        }
+
+        // for .. in pada string
+        const dataString = "Bagus Adi Jaya";
+        for(const arrayString of dataString){
+            document.writeln(`<p> ${arrayString} </p>`);
+        }
 
     </script>
 </body>
