@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>scope</title>
 </head>
 <body>
     <script>
 
-        
+        // global scope
+        let counter = 0;
+
+        // global scope
+        function hitMe(){
+            // local scope hitMe
+            counter++;
+        }
+
+       hitMe();
+       hitMe();
+       hitMe();
+
+       console.info(counter);
+
+        // Nested Function scope
+        function first(){
+            let firstVariable = "Nested";
+
+            function second(){
+                console.info(firstVariable);
+            }
+
+            second();
+
+        }
+
+        first();
+
 
     </script>
 </body>
