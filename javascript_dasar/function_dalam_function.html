@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Function dalam Function</title>
 </head>
 <body>
     <script>
 
-        
+        // function dalam function disebut juga inner function
+        function outer(){
+
+            function inner(){
+                console.info("hallo");
+            };
+            inner(); // akan tampil jika outer dipanggil
+            inner();
+
+        };
+
+        outer(); // memanggil fungsi inner()
 
     </script>
 </body>
