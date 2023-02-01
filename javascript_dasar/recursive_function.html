@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>recursive function</title>
 </head>
 <body>
     <script>
-
+        // recursive function menggunakan factorial loop
+        function factorial(value){
+            let result = 1;
+            for(let i = 1; i <= value; i++){
+                result *= i;
+            }
+            return result;
+        }
         
+        document.writeln(factorial(8));
+        
+        // factorial recursive
+        function factorialRecursive(value){
+            if(value === 1){
+                return 1;
+            } else {
+                return value * factorialRecursive(value-1);
+            }
+
+        }
+        document.writeln(factorialRecursive(8));
+
 
     </script>
 </body>
