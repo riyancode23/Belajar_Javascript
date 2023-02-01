@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Function sebagai value</title>
 </head>
 <body>
     <script>
 
-        
+        function sayHello(name){
+            document.writeln(`<p>Hallo ${name} </p>`);
+        };
 
+        // function di variabel
+        let callFunction = sayHello;
+        callFunction("Budi");
+
+        //function di parameter
+        function giveMeName(callback){
+            callback("Agus");
+        };
+
+        giveMeName(sayHello);
     </script>
 </body>
 </html>
