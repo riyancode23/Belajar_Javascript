@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Anonymous Function</title>
 </head>
 <body>
     <script>
 
+        // anonymous function. function tidak memiliki nama
+        let say = function (name){
+        document.writeln(`<p> kamu lulus ${name} </p>`)
+        };
+
+        say("Abdul");
         
+         function giveMeName(callback){
+            callback("Riyan");
+         };
+
+         giveMeName(say);
+
+         // anonymous function pada parameter
+         giveMeName(function(name){
+            document.writeln(`<p> Hi ${name} </p>`);
+         });
 
     </script>
 </body>
