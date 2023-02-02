@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>getter dan setter</title>
 </head>
 <body>
     <script>
+        // didalam object bisa menggunakan getter dan setter
+        const person ={
+            namaDepan : "Bagus",
+            namaBelakang : "Rahardjo",
+           get namaLengkap(){ // Getter menjadikan function menjadi property object
+            return `${this.namaDepan} ${this.namaBelakang}`; // menggunakan kata kunci this
+           },
+           // mengubah data dengan setter 
+           set namaLengkap(val){
+            const array = val.split(" ");
+            this.namaDepan = array[0];
+            this.namaBelakang = array[1];
+           }
+        };
 
+        // otomatis memanggil get namaLengkap()
+        console.info(person.namaLengkap);
+
+        person.namaLengkap = "Budi Junaedi";
+        console.table(person);
         
+
+
 
     </script>
 </body>

@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>kata kunci this</title>
 </head>
 <body>
     <script>
-
+        console.info(this); // window
         
+        function info() {
+            console.info(this); // window
+            function inner() {
+                console.info(this); // window
+            }
+            inner();
+        }
 
+        info();
+
+
+        // this dalam obect
+        const person ={
+            name : "Bagus",
+            sayHello : function(value){
+                console.info(`Hallo ${value}, my name is ${this.name}`);
+            }
+        };
+
+        person.sayHello("Riyan");
     </script>
 </body>
 </html>

@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>closure</title>
 </head>
 <body>
     <script>
 
-        
+        function createAdder(value) {
+            const name = "Riyan";
+
+            function add(params) {
+                console.info(name);
+                return value + params;
+                
+            }
+            return add;
+        }
+
+        const addData = createAdder(2);
+        console.info(addData(19));
 
     </script>
 </body>

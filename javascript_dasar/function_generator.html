@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>function generator</title>
 </head>
 <body>
     <script>
 
-        
+        /* 
+        function generator menambahkan tanda * setelah kode function. 
+        function generator mirip array namun bukan array 
+        */
+        // Kasus sederhana
+        function* buatNama(){
+            yield "Estu";
+            yield "Fatikha";
+            yield "Rohmah";
+        }
 
+        const nama = buatNama();
+        for (const data of nama) {
+            console.log(data);  
+        }
+
+        //  kasus lebih kompleks
+         function* buatGanjil(value){
+            for (let i = 0; i <= value; i++){
+                if(i % 2 === 1){
+                    yield i;
+                }  
+            }
+        }
+
+        const nomor = buatGanjil(30);
+        for (const dataNomor of nomor) {
+            console.log(dataNomor);  
+        }
     </script>
 </body>
 </html>
