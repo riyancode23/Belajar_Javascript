@@ -4,13 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>destructuring</title>
 </head>
 <body>
     <script>
-
+        // destructuring pada array
+        const name = ["Estu","Fikri","Riyan"];
+        const [first, middle, last]=name; // destructuring
         
+        console.info(first);
+        console.info(middle);
+        console.info(last);
 
+        // entering for console
+        console.info(" ");
+
+        // destructuring pada objek
+        const person = { 
+            namaDepan : "Bagus",
+            namaBelakang : "Gali",
+            alamat : {
+                jalan: "jl bale panjang",
+                kecamatan: "tanggulangin",
+                kota: "sidoarjo",
+                negara: "Indonesia"
+            },
+            hobby : "game",
+            channel_YT: "pro gammer Indonesia"
+        };
+
+        {
+       let {namaDepan, namaBelakang} = person; // destructuring
+        console.info(namaDepan);
+        console.info(namaBelakang);
+        }
+
+        // destructuring object nested
+        let {namaDepan, namaBelakang, alamat:{jalan, kecamatan, kota, negara}} = person; 
+        console.info(namaDepan);
+        console.info(namaBelakang);
+        console.info(jalan);
+        console.info(kecamatan);
+        console.info(kota);
+        console.info(negara);
+
+        // destructuring pada function parameter object
+        function displayPerson({firstName, lastName}) 
+        {
+            document.writeln(firstName);
+            document.writeln(lastName);
+        }
+
+        const dataPerson = {
+            firstName: "Riyan",
+            lastName: "Fikri",
+        };
+
+        displayPerson(dataPerson);
+
+        // destructuring pada function parameter array
+        function sum([a, b]) {
+            return a + b;
+        }
+
+        let hasil = sum([4,5]);
+        document.writeln(`<p> ${hasil} </p>`);
+    
     </script>
 </body>
 </html>
