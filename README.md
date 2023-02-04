@@ -8,3 +8,7 @@ Bahasa yang digunakan :
 - Javascript
 
 Sebelum belajar dasar javascript sebaiknya belajar terlebih dahulu bahasa HTML5 dan CSS
+
+Materi :
+1. Javascript Dasar
+2. Javascript Object Oriented Programming(OOP)
