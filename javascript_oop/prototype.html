@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>prototype</title>
 </head>
 <body>
     <script>
 
-        
+         /*
+        function ini disebut constructor function
+        best practice menggunakan huruf Kapital atau besar pada awal penamaan constructor function
+         */
+         function Person(firstName, lastName) { // parameter firstName dan lastname
+            // property pada constructor function
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                console.info(`Hallo ${name}. Nama saya adalah ${this.firstName}`); 
+            }
+        }
 
+        // membuat prototype
+        Person.prototype.sayBye = function () {
+            console.info(`Good Bye ${this.firstName}`);   
+        }
+        Person.prototype.run = function () {
+            console.info(`${this.firstName} is running`);
+        }
+
+        // membuat object menggunakan kata kunci new
+        const riyan = new Person("Opik", "Fikri"); // menggunakan parameter
+        const fikri = new Person("Galih","Surya",); // menggunakan parameter
+
+        // menampilkan data
+        console.info(riyan);
+        console.info(fikri);
+
+        riyan.sayBye();
+        fikri.run();
     </script>
 </body>
 </html>

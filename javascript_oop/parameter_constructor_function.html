@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OOP property constructor function</title>
+    <title>OOP parameter constructor function</title>
 </head>
 <body>
     <script>
 
-        // membuat class menggunakan function untuk ECMASCRIPT dibawah versi 6
+         // membuat class menggunakan function untuk ECMASCRIPT dibawah versi 6
 
         /*
         function ini disebut constructor function
         best practice menggunakan huruf Kapital atau besar pada awal penamaan constructor function
          */
-        function Person() { 
+         function Person(fistName, lastName) { // parameter fistname dan lastname
             // property pada constructor function
-            this.fistName="";
-            this.lastName="";
+            this.fistName = fistName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                console.info(`Hallo ${name}. Nama saya adalah ${this.fistName}`);
+                
+            }
         
         }
 
         // membuat object menggunakan kata kunci new
-        const riyan = new Person();
-        const fikri = new Person();
+        const riyan = new Person("Opik", "Fikri"); // menggunakan parameter
+        riyan.sayHello("Agnes");
+
+        const fikri = new Person("Galih","Surya",); // menggunakan parameter
+        fikri.sayHello("Arif");
 
         // menampilkan data
         console.info(riyan);
         console.info(fikri);
+
 
 
     </script>
