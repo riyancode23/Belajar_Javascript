@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OOP method constructor function</title>
+    <title>OOP property constructor function</title>
 </head>
 <body>
     <script>
@@ -19,23 +19,12 @@
             // property pada constructor function
             this.fistName="";
             this.lastName="";
-            this.sayHello = function (name) {
-                console.info(`Hallo ${name}. Nama saya adalah ${this.fistName}`);
-                
-            }
         
         }
 
         // membuat object menggunakan kata kunci new
         const riyan = new Person();
-        riyan.fistName = "Riyan";
-        riyan.lastName ="Fikri";
-        riyan.sayHello("Agnes");
-
         const fikri = new Person();
-        fikri.fistName="Agus";
-        fikri.lastName = "Budiman";
-        fikri.sayHello("Arif");
 
         // menampilkan data
         console.info(riyan);
