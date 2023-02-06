@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>class Super Constructor</title>
 </head>
 <body>
     <script>
 
-        
+        // Parrent Inheritance
+        class Employee{
+            constructor(firstName){
+                this.firstName= firstName;
+            }
+
+            sayHello(name){
+                console.info(`Hi ${name}, my name is employe ${this.firstName}`);
+            }
+        }
+
+        // Child Inheritance
+        class Manager extends Employee {
+            constructor(firstName, lastName){
+                super(firstName);
+                this.lastName = lastName;
+            }
+
+            sayHello(name){
+                console.info(`Hi ${name}, my name is Manager ${this.firstName} ${this.lastName}`);
+            }
+        }
+
+
+            // eksekusi data
+            const sayaHi = "Bagas";
+            const employee = new Employee("Galih");
+            employee.sayHello(sayaHi);
+
+            const manager = new Manager("Doni", "Sanjaya");
+            manager.sayHello(sayaHi);
 
     </script>
 </body>

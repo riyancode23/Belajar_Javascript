@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Method di class</title>
 </head>
 <body>
     <script>
 
-        
+        class Person {
+            constructor(name){
+                this.name = name;  // property
+            }
+            sayHello(name){
+                console.info(`Hi ${name}, my name is ${this.name}`);
+            }
+        }
+
+        const data = new Person("Riyan"); // menambahkan parameter
+        data.sayHello("Agnes");
+        console.info(data.name);
+        console.info(data);
 
     </script>
 </body>

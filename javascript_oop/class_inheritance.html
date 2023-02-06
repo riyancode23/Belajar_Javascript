@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>class inheritance</title>
 </head>
 <body>
     <script>
 
-        
+        class Employee{
+
+            sayHello(name){
+                console.info(`Hi ${name}, my name is employe ${this.name}`);
+            }
+        }
+
+        class Manager extends Employee { // 
+
+            sayHello(name){
+                console.info(`Hi ${name}, my name is Manager ${this.name}`);
+            }
+        }
+
+        const employee = new Employee();
+        employee.name = "Riyan";
+        employee.sayHello("Akmal");
+
+        const manager = new Manager();
+        manager.name = "Fikri";
+        manager.sayHello("Raffan");
 
     </script>
 </body>

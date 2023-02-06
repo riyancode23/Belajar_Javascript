@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>prototype inheritance</title>
 </head>
 <body>
     <script>
 
-        
+        function Employee(name) {
+            this.name = name;
+        }
+
+        function Manager(name) {
+            this.name = name;
+
+        }
+
+        Manager.prototype = Employee.prototype; // prototype inheritance salah
+        Manager.prototype = Object.create(Employee.prototype); // prototype inheritance Benar
+
+        Manager.prototype.sayHello = function (name) {
+            console.info(`Hallo ${name}, my name is Manager ${this.name}`);
+            
+        }
+        Employee.prototype.sayHello = function (name) {
+            console.info(`Hallo ${name}, my name is Employee ${this.name}`);
+            
+        }
+
+        const employee = new Employee("Raffan");
+        employee.sayHello("Adi");
+        const manager = new Manager("Bagus");
+        manager.sayHello("Tio");
 
     </script>
 </body>
