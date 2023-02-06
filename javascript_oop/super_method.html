@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>super method</title>
 </head>
 <body>
     <script>
 
-        
+        class Shape {
+            paint(){
+                console.info("Membuat Shape");
+            }
+        }
+
+        class Circle extends Shape{
+            paint(){
+                super.paint();  // super method. memanggil method di Induk
+                console.info("Membuat Circle");
+            }
+        }
+
+        const lingkaran = new Circle();
+        lingkaran.paint();
 
     </script>
 </body>

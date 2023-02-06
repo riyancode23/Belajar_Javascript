@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Operator Instanceof</title>
 </head>
 <body>
     <script>
+        class Employee{
 
+        }
+
+        class Director{
+
+        }
         
+        class Manager extends Employee{
+
+        }
+
+        const adi = new Employee();
+        const Agus = new Manager();
+        const Herman = new Director();
+
+        console.info(Herman instanceof Employee); // false
+        console.info(Herman instanceof Director); // true
+
+        // efek inheritance atau pewarisan
+        console.info(adi instanceof Employee); // true
+        console.info(Agus instanceof Employee); // true
+
 
     </script>
 </body>

@@ -4,13 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>getter dan setter pada class</title>
 </head>
 <body>
     <script>
+        // getter dan setter adanya diprototype
+        class Person{
+            //instance object
+            constructor(firstName, lastName){
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
 
-        
+            // prototype get fullname
+            get fullName() {
+                return `${this.firstName} ${this.lastName}`;
+            }
 
+            // prototype set fullname
+            set fullName(value){
+                const result = value.split(" ");
+                this.firstName = result[0];
+                this.lastName = result[1];
+            }
+        }
+
+        // meemanggil dan menampilkan hasil 
+        const data = new Person("Riyan", "Fikri");
+        console.info(data);
+        console.info(data.fullName);
+
+        data.fullName="Bagas Adi";
+        console.info(data.fullName);
     </script>
 </body>
 </html>

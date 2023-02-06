@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>public class field</title>
 </head>
 <body>
     <script>
 
-        
+        class Customer{
+            
+            namaDepan;  // public class field
+            namaBelakang;  // public class field
+            saldo=0;  // public class field
+
+            constructor(namaDepan, namaBelakang){
+                this.namaDepan = namaDepan;
+                this.namaBelakang = namaBelakang;
+
+            }
+            sayHello(){
+
+            }
+        }
+
+        const data = new Customer("Riyan","Fikri");
+        console.info(data);
 
     </script>
 </body>

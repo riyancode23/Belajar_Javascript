@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>static method</title>
 </head>
 <body>
     <script>
 
-        
+        class MathUtil{
+
+            static sum(...numbers){
+                let total = 0;
+                for(const number of numbers){
+                    total += number;
+                }
+                return total;
+            }
+        }
+
+        const getData = MathUtil.sum(4, 6, 5, 1, 2);
+        console.info(getData);
 
     </script>
 </body>

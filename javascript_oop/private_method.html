@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>private method</title>
 </head>
 <body>
     <script>
 
-        
+        class Person{
+
+            say(name){
+                if (name) {
+                    this.#sayWithName(name);
+                } else {
+                    this.#sayWithoutName();
+                }
+            }
+
+            #sayWithName(name){
+                console.info(`Hallo,, ${name}`);
+            }
+            #sayWithoutName(){
+                console.info(`Hallo`);
+            }
+        }
+
+        const data = new Person();
+        data.say("Harun");
+        data.say();
+       // data.#sayWithName();  tidak bisa dieksekusi karena sivat field private
 
     </script>
 </body>

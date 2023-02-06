@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>private class field</title>
 </head>
 <body>
     <script>
 
-        
+        class Counter{
+            #counter = 0; // private class field diawali tanda #
+
+            increament(){
+                this.#counter++;
+
+            }
+
+            decreament(){
+                this.#counter--;
+
+            }
+
+            get(){
+                return this.#counter;
+            }
+          
+        }
+
+        const count = new Counter();
+        count.increament();
+        count.increament();
+        count.increament();
+        count.increament();
+        console.info(count.get());
 
     </script>
 </body>
