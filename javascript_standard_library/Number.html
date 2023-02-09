@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Number</title>
 </head>
 <body>
     <script>
 
+        const input = "12234";
+        const number = Number(input);
+
+        console.info(typeof input);
+        console.info(typeof number);
+        console.info(input);
+        console.info(Number.MIN_VALUE);
+        console.info(Number.MAX_VALUE);
+        console.info(Number.MAX_SAFE_INTEGER);
+        console.info(Number.MIN_SAFE_INTEGER);
+
+        const data = Number("1234");
+        console.info(Number.isInteger(data));
+        console.info(Number.isNaN(data));
+
+
         
+
 
     </script>
 </body>
