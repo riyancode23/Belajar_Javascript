@@ -12,4 +12,4 @@ Sebelum belajar dasar javascript sebaiknya belajar terlebih dahulu bahasa HTML5 
 Materi :
 1. Javascript Dasar
 2. Javascript Object Oriented Programming(OOP)
-3. Javascript Standard Library
+3. Javascript Standard Library (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects)
