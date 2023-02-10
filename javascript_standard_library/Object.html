@@ -4,12 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Object</title>
 </head>
 <body>
     <script>
 
-        
+    {   
+
+        // OBJECT SEAL dan FREEZE
+         const dataObject = {
+            firstName:"Riyan",
+            lastName:"Fikri"
+        }
+        Object.seal(dataObject); // bisa diubah namun tidak bisa dihapus
+        dataObject.firstName ="Rudi";
+        console.info(dataObject);
+
+        Object.freeze(dataObject); // tidak bisa diubah dan tidak bisa dihapus
+        dataObject.firstName ="Bagus";
+        delete dataObject.lastName;
+
+        console.info(dataObject);
+    }
+
+    {
+        // object assign
+        const target = {
+            firstName : "Budi"
+        };
+        const source = {
+            lasttName : "Agus"
+        };
+
+        Object.assign(target, source);
+        console.info(target);
+        console.info(source);
+
+    }
+
+
+    {
+        // Object Property name & value
+
+        const person = {
+            firstName:"Riyan",
+            lastName:"Fikri"
+        };
+
+        console.info(Object.values(person));
+        console.info(Object.getOwnPropertyNames(person));
+
+    }
 
     </script>
 </body>
