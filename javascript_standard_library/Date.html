@@ -4,12 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Date</title>
 </head>
 <body>
     <script>
 
-        
+        {
+            // create date
+            const tgl = new Date();
+            document.writeln(`<p>${tgl}</p>`);
+
+            // create date
+            const tgl2 = new Date(2021, 10, 22);
+            document.writeln(`<p>${tgl2}</p>`);
+
+            // create date
+            const tgl3 = new Date(2021, 10,10, 15, 10, 100);
+            document.writeln(`<p>${tgl3}</p>`);
+
+            // create date with milis
+            const tgl4 = new Date(1676122770112);
+            document.writeln(`<p>${tgl4}</p>`);
+        }
+
+        {
+            // Epoch dan unix timestamp
+            const tgl = new Date();
+            document.writeln(`<p>${tgl.getTime()}</p>`);
+
+            // create date
+            const tgl2 = new Date(2021, 10, 22);
+            document.writeln(`<p>${tgl2.getTime()}</p>`);
+
+            // create date
+            const tgl3 = new Date(2021, 10,10, 15, 10, 100);
+            document.writeln(`<p>${tgl3.getTime()}</p>`);
+
+            // create date with milis
+            const tgl4 = new Date(1676122770112);
+            document.writeln(`<p>${tgl4}</p>`);
+
+            document.writeln(`<p>${Date.now()}</p>`);
+        }
+
+        {
+            // Parsing Date and Time
+            const parseTimestamp = Date.parse("2021-12-18T10:10:10.123+07:00");
+            console.info(parseTimestamp); // Hasil Epoch Millis
+
+            const parseDate = new Date(parseTimestamp);
+            console.info(parseDate);
+        }
+
+        {
+            // Getter and Setter in Date
+            const date = new Date();
+            
+            console.info(date.getFullYear());
+            console.info(date.getMonth());
+            console.info(date.getDay());
+            console.info(date.getHours());
+            console.info(date.getMinutes());
+            console.info(date.getSeconds());
+            console.info(date.getTimezoneOffset());
+
+        }
 
     </script>
 </body>

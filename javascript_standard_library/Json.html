@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>json</title>
 </head>
 <body>
     <script>
 
-        
+        const person = {
+            namaDepan : "Estu",
+            namaTengah : "Fatikha",
+            namaBelakang : "F R",
+            alamat : {
+                kelurahan : "GanggangPanjang",
+                kecamatan : "Tanggulangin",
+                Kota : "Sidoarjo",
+                negara : "Indonesia"
+            },
+            hobi : ["Coding","Climbing","Fishing"]
+        };
+
+        // Object to string with JSON
+        const json = JSON.stringify(person);
+        console.info(json);
+
+        // String to Object with JSON
+        const jsonObject = JSON.parse(json);
+        console.info(jsonObject);
 
     </script>
 </body>
