@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>set</title>
 </head>
 <body>
     <script>
+        // set mirip denan array hanya saja isi nya selalu unique
+        const set = new Set();
 
-        
+        set.add("Raffan");
+        set.add("Raffan");
+        set.add("Bagus");
+        set.add("Riyan");
+
+        console.info(set);
+
+        set.forEach((value) => console.info(value));
 
     </script>
 </body>
