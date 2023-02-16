@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>symbol</title>
 </head>
 <body>
     <script>
 
-        
+        // key pada symbol bersifat unik
+
+        {
+            // symbol
+            const namaDepan = Symbol();
+            const namaBelakang = Symbol();
+
+            const person = {};
+            person[namaDepan]  = "Riyan";
+            person[namaBelakang]  = "Fikri";
+
+            console.info(person);
+
+        }
+
+        {
+            //symbol for
+            const person = {};
+
+            person[Symbol.for("nama")]  = "Fikri";
+            person[Symbol.for("user")]  = "Rafi";
+
+            console.info(person[Symbol.for("nama")]);
+            console.info(person[Symbol.for("user")]);
+            console.info(person);
+        }
 
     </script>
 </body>

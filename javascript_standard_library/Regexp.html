@@ -4,13 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>regexp</title>
 </head>
 <body>
     <script>
 
-        
+        {
+            // create regex
 
+            const regex1 = /Bbagus/;
+            const regex2 = new RegExp("bagus");
+            const regex3 = new RegExp(/bagus/);
+        }
+
+        {
+            // test regex
+            const data = "Eka Bagus Saputri Pertiwi";
+            const regex = /Bagus/;
+
+            const hasil = regex.exec(data);
+            console.info(hasil);
+            console.info(regex.exec("Hadi Cahyo"));
+
+            const test = regex.test(data);
+            console.info(test);
+            console.info(regex.test("Hadi Cahyo"));
+
+
+
+        }
+        {
+            // regex modifier menggunnkan i dan g
+            const data = "Bagus anggara\nbagus joko\nAnggara Firmansyah";
+            const cari1 = /bagus/ig;
+            const cari2 = /anggara/ig;
+
+            let result;
+            while ((result = cari1.exec(data)) !== null) {
+                console.info(result);
+            }
+
+            while ((result = cari2.exec(data)) !== null) {
+                console.info(result);
+            }
+        }
+
+        {
+            // advance regex
+            const data = "Adi adam Akmal adU Adil Aan";
+            const cari1 = /ad[aiueo]/ig;
+            while ((result = cari1.exec(data)) !== null) {
+                console.info(result);
+            }
+        }
+
+        {
+            // regexp di string match, search, replace , replace all
+            const data = "Adi ada Akmal adU bau Aan Ade";
+            const cari1 = /ad[aiueo]/ig;
+            // menampilkan data di console
+            console.info(data.match(cari1));
+            console.info(data.search(cari1));
+            console.info(data.replace(/ad[aiueo]/i,"OKE"));
+            console.info(data.replaceAll(cari1,"OKE"));
+            console.info(data.split(/a/ig));
+        }
     </script>
 </body>
 </html>
