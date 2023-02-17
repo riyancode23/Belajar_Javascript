@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>proxy</title>
 </head>
 <body>
     <script>
 
+        const target = {};
+
+        const handler = {
+            get: function(target, property){ 
+            // log handler Get
+            console.info(`acces property : ${property}`);
+            return target[property];
+            },
+            set: function (target, property, value){ 
+            // log handler set
+            console.info(`change property : ${property} : ${value}`);
+            target[property] = value;
+            }
+        };
+
+        const proxy = new Proxy(target, handler);
+        // set pada handler
+        proxy.nama = "Riyan Fikri";
+        proxy.warga = "Indonesia";
+        proxy.agama = "Islam";
         
+         // get pada handler
+        console.info(proxy.nama);
+        console.info(proxy.warga);
+        console.info(proxy.agama);
+
+        // menampilkan data target
+        console.info(target);
+
 
     </script>
 </body>

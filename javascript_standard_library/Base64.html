@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>base64</title>
 </head>
 <body>
     <script>
 
-        
+        const original = "Riyan Fikri dan Estu";
+
+        const encoded = btoa(original);
+        console.info(encoded);
+
+        const decoded = atob(encoded);
+        console.info(decoded);
 
     </script>
 </body>

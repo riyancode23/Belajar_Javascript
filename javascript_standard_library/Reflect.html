@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>reflect</title>
 </head>
 <body>
     <script>
 
-        
+        const person = {};
+
+        Reflect.set(person, "nama", "Riyan Fikri");
+        Reflect.set(person, "alamat", "ganggang panjang");
+
+        console.info(person);
+        console.info(Reflect.get(person, "nama"));
+        console.info(Reflect.get(person, "alamat"));
+        console.info(Reflect.has(person, "nama")); // true
+        console.info(Reflect.has(person, "alamat")); // true
+        console.info(Reflect.has(person, "hobi")); // false
+
+
 
     </script>
 </body>
