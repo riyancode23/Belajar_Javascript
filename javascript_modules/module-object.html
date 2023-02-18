@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mdule Object</title>
+</head>
+<body>
+    <script type="module">
+
+        // import module dengan object data
+        import * as data from "./scripts/module-object.js";
+
+        console.info(data.namaDepan);
+        console.info(data.namaBelakang);
+
+        data.sum(6, 8);
+
+        const kelas = new data.sayHello();
+        console.info(kelas);
+
+    </script>
+</body>
+</html>
