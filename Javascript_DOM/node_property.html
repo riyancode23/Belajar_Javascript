@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node property</title>
+</head>
+<body>
+
+    <ul id="menu">
+        <li id="satu">Satu</li>
+        <li id="dua">Dua</li>
+        <li id="tiga">Tiga</li>
+    </ul>
+    <script>
+
+        const menu = document.getElementById("menu");
+        console.info(menu);
+        console.info(menu.childNodes);
+
+
+        const satu = document.getElementById("satu");
+        console.info(satu);
+        console.info(satu.textContent);
+        console.info(satu.previousSibling);
+        console.info(satu.nextSibling);
+
+    </script>
+</body>
+</html>
